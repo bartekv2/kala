@@ -29,12 +29,12 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  about: "About me"
-  body: "Work with the body"
-  coaching: "Psychological counseling / coaching"
-  workshops: "Workshops"
-  contact: "Contact"
-  copyrights: "All rights reserved"
-  main_quote: "\"The body is living art. Your movement through time and space is art. A painter has brushes. You have your body.\""
+pl:
+  hello: "Cześć świecie"
+  about: "O mnie"
+  body: "Praca z ciałem"
+  coaching: "Poradnictwo psychologiczne / coaching"
+  workshops: "Warsztaty"
+  contact: "Kontakt"
+  copyrights: "Wszelkie prawa zastrzeżone"
+  main_quote: "„Ciało jest sztuką. Twój ruch w czasie i przestrzeni jest sztuką. Malarz ma pędzle. Ty masz swoje ciało”."
