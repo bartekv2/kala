@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kala</title>
+    <title>Kala - <%= @cms_page.label %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon-32.ico') %>
   </head>
 
   <body>
 
-    <header class="bg-green-400 text-teal-600 pt-6 md:pt-4">
-      <div class="bg-gray-400 container block justify-around md:items-center mx-auto px-4 flex-wrap">
-
-      <div class="relative justify-center">
-        <h1 class="text-center text-5xl font-bold font-serif">KALA</h1>
-        <div class="bg-red-500 absolute right-0 top-0">
-          <% if session[:locale] == "pl" %>
-            <%= link_to "EN", set_locale_path(locale: "en") %>
-          <% else %>
-            <%= link_to "PL", set_locale_path(locale: "pl") %>
-          <% end %>
+    <header class="bg-green-400 container mx-auto pt-6 md:pt-4 text-teal-600">
+        <div class="relative">
+          <h1 class="text-center text-5xl font-bold font-serif">KALA</h1>
+          <div class="bg-red-500 absolute right-0 top-0">
+            <%= show_language_to_select %>
+          </div>
         </div>
-      </div>
+        <%= render partial: "layouts/navbar" %>
+    </header>
 
-      <label for="menu-toggle" class="cursor-pointer md:hidden block">
-        <svg class="fill-current text-white hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
-      </label>
-      <input class="hidden" type="checkbox" id="menu-toggle" />
-      <nav class="bg-gray-500 hidden md:flex font-bold md:text-xs lg:text-sm md:items-center justify-center md:w-auto w-full" id="menu">
-        <ul class="md:flex items-center justify-around uppercase">
-          <li class="<% if params[:controller] == "home" && params[:action] == "index" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="/">home</a>
-          </li>
-          <li class="<% if params[:controller] == "home" && params[:action] == "about" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="/o-mnie"><%= t "about" %></a>
-          </li>
-          <li class="<% if params[:controller] == "home" && params[:action] == "body" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="#"><%= t "body" %></a>
-          </li>
-          <li class="<% if params[:controller] == "home" && params[:action] == "coaching" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="#"><%= t "coaching" %></a>
-          </li>
-          <li class="<% if params[:controller] == "home" && params[:action] == "workshops" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="#"><%= t "workshops" %></a>
-          </li>
-          <li class="<% if params[:controller] == "home" && params[:action] == "contact" %>active <% end %>border-t md:border-0 md:ml-4">
-            <a class="block md:inline hover:text-teal-400 py-4 md:py-0" href="#"><%= t "contact" %></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-    <main class="bg-teal-600 text-white">
-      <div class="bg-blue-200 container mx-auto px-4">
+    <main class="bg-teal-600 text-black">
+      <div class="bg-blue-200 container mx-auto">
         <%= yield %>
       </div>
     </main>
 
-    <footer class="text-center text-teal-600 mt-6"><p><%= t "copyrights" %> <%= DateTime.now.year %></p></footer>
+    <footer class="text-center text-teal-600 mt-6">
+      <p><%= show_footer %></p>
+    </footer>
 
   </body>
 </html>
