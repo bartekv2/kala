@@ -1,8 +1,8 @@
-<label for="menu-toggle" class="cursor-pointer md:hidden block">
+<label for="menu-toggle" class="flex justify-center cursor-pointer md:hidden pb-2">
   <svg class="fill-current text-white hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
 </label>
 <input class="hidden" type="checkbox" id="menu-toggle" />
-<nav class="bg-gray-500 hidden md:flex font-bold md:text-xs lg:text-sm justify-center md:w-auto w-full" id="menu" role="navigation">
+<nav class="bg-gray-500 hidden md:flex font-bold text-xs lg:text-sm justify-center md:w-auto w-full" id="menu" role="navigation">
   <ul class="md:flex uppercase">
     <li class="<%= active_class("/") %> border-t md:border-0 md:ml-4">
       <%= link_to "home", "/", class: "block md:inline hover:text-teal-400 py-4 md:py-0" %>
