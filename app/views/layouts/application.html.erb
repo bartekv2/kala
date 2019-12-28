@@ -14,7 +14,7 @@
 
     <header class="bg-green-400 container mx-auto pt-6 md:pt-4 text-teal-600">
         <div class="relative">
-          <h1 class="text-center text-5xl font-bold font-serif">KALA</h1>
+          <h1 class="text-center text-5xl">KALA</h1>
           <div class="bg-red-500 absolute right-0 top-0">
             <%= show_language_to_select %>
           </div>
@@ -22,9 +22,10 @@
         <%= render partial: "layouts/navbar" %>
     </header>
 
-    <main class="bg-teal-600 text-black">
+    <main class="bg-teal-600">
       <div class="bg-blue-200 container mx-auto">
         <%= yield %>
+                    <p class="text-cyan">Józef</p>
       </div>
     </main>
 
