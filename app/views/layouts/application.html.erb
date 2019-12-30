@@ -4,11 +4,9 @@
     <title>Kala - <%= @cms_page.label %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('favicon-32.ico') %>
-    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap&subset=latin-ext" rel="stylesheet">
   </head>
 
   <body>
@@ -24,10 +22,8 @@
     </header>
 
     <main class="bg-teal-600 bg-scroll bg-cover" style="background-image: url(/images/saturn.jpg)">
-      <div class="w-1/3 mx-auto py-48 text-gray-200">
         <%= yield %>
-                    <p class="text-jozef">Józef i Kózef i Karuzef</p>
-      </div>
+                    <p class="text-jozef">Józef i Kózef i Karuzef razem</p>
     </main>
 
     <footer class="text-center text-teal-600 my-6">
