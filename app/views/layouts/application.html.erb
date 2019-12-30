@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kala - <%= @cms_page.label %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon-32.ico') %>
+  </head>
+
+  <body>
+
+    <header class="bg-green-400 container mx-auto pt-6 md:pt-4 text-teal-600">
+        <div class="relative">
+          <h1 class="text-center text-5xl">KALA</h1>
+          <div class="bg-red-500 absolute right-0 top-0">
+            <%= show_language_to_select %>
+          </div>
+        </div>
+        <%= render partial: "layouts/navbar" %>
+    </header>
+
+    <main class="bg-teal-600 bg-scroll bg-cover" style="background-image: url(/images/saturn.jpg)">
+      <div class="w-1/3 mx-auto py-48 text-gray-200">
+        <%= yield %>
+                    <p class="text-jozef">Józef</p>
+      </div>
+    </main>
+
+    <footer class="text-center text-teal-600 my-6">
+      <%= simple_format show_footer.upcase %>
+    </footer>
+
+  </body>
+</html>

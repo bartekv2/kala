@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: "Alata";
+  src: url('/assets/Alata-Regular');
+}
+body {
+  font-family: "Alata";
+}
+h2 {
+  @apply text-2xl py-2;
+}
+#menu-toggle:checked + #menu {
+  display: block;
+}
+#menu li.active a {
+  @apply text-teal-900;
+}
