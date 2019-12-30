@@ -6,7 +6,7 @@
   src: url('/assets/Alata-Regular');
 }
 body {
-  font-family: "Alata";
+  font-family: "Alata", sans-serif;
 }
 h2 {
   @apply text-2xl py-2;
