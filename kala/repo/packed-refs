@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+8e00115daf4df59d088ed904772e48ee56e06b02 refs/heads/dependabot/bundler/rack-2.0.8
+0c1d0a437512c04805eb037491269db7ed95dde8 refs/heads/master
+8e00115daf4df59d088ed904772e48ee56e06b02 refs/pull/1/head
+789d3ce9c3c1406f8740188d006a46a8cb26a5ba refs/pull/1/merge

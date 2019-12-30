@@ -1,0 +1,7 @@
+# For Postgres
+DATABASE_URL=postgresql://deploy:Szczerzuj1a@127.0.0.1/kala
+
+SECRET_KEY_BASE=cd897e20dddfbbfea3c130c3e86586c246c2bb1b99df5efcfc56aa64eaf195de580f97dd373bb4794a1da7f25a021e9c4b64e7d1cc004930cbfa89ccb4674f8f
+
+STRIPE_PUBLIC_KEY=x
+

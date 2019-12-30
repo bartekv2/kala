@@ -1,0 +1,29 @@
+- content_for :right_column do
+  = render "comfy/admin/cms/categories/index", type: "Comfy::Cms::File"
+
+:ruby
+  cms_uploader_data = {
+    cms_uploader: {
+      url: comfy_admin_cms_site_files_path(@site, source: :plupload, categories: params[:categories]),
+      token: {name: request_forgery_protection_token, value: form_authenticity_token},
+      session: {name: Rails.application.config.session_options[:key], value: request.session_options[:id]}
+    }
+  }
+
+#cms-uploader{data: cms_uploader_data}
+  #cms-uploader-drag-drop-target
+
+  .page-header
+    = link_to t('.new_link'), new_comfy_admin_cms_site_file_path(@site), class: "btn btn-secondary float-right", id: "cms-uploader-browse"
+    %h2= t('.title')
+
+  = comfy_admin_partial "comfy/admin/cms/partials/files_before"
+
+  = comfy_paginate @files
+
+  %ul.list.sortable.cms-uploader-filelist
+    = render partial: "file", collection: @files
+
+  = comfy_admin_partial "comfy/admin/cms/partials/files_after"
+
+  = comfy_paginate @files
