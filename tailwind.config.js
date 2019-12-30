@@ -1,9 +1,8 @@
 module.exports = {
-  important: true,
   theme: {
     extend: {
       colors: {
-        jozef: '#9cdbff',
+        'jozef': '#243c5a',
       }
     }
   },

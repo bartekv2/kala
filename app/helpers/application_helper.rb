@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def show_footer
-    "© #{DateTime.now.year} #{t "copyrights"}"
+    "<p>Kala</p><p>© #{DateTime.now.year} #{t "copyrights"}</p>"
   end
 
   def active_class(link_path)
