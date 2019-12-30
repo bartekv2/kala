@@ -2657,3 +2657,171 @@ F, [2019-12-30T16:15:32.305349 #9734] FATAL -- : [66d75084-9fc5-4817-9a60-668ad7
 [66d75084-9fc5-4817-9a60-668ad7e66731] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
 [66d75084-9fc5-4817-9a60-668ad7e66731] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
 [66d75084-9fc5-4817-9a60-668ad7e66731] /usr/lib/ruby/vendor_ruby/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-12-30T16:16:47.249003 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502] Started GET "/" for 37.47.68.182 at 2019-12-30 16:16:47 +0000
+I, [2019-12-30T16:16:47.250081 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502] Processing by Comfy::Cms::ContentController#show as HTML
+D, [2019-12-30T16:16:47.253306 #9734] DEBUG -- : [8fd4004a-b71d-4296-951c-60e2db090502]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+D, [2019-12-30T16:16:47.254731 #9734] DEBUG -- : [8fd4004a-b71d-4296-951c-60e2db090502]   [1m[36mComfy::Cms::Site Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2019-12-30T16:16:47.257028 #9734] DEBUG -- : [8fd4004a-b71d-4296-951c-60e2db090502]   [1m[36mComfy::Cms::Page Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/"], ["LIMIT", 1]]
+D, [2019-12-30T16:16:47.259217 #9734] DEBUG -- : [8fd4004a-b71d-4296-951c-60e2db090502]   [1m[36mComfy::Cms::Layout Load (0.7ms)[0m  [1m[34mSELECT "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-12-30T16:16:47.261593 #9734] DEBUG -- : [8fd4004a-b71d-4296-951c-60e2db090502]   [1m[36mComfy::Cms::Fragment Load (0.7ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = $1 AND "comfy_cms_fragments"."record_type" = $2[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Page"]]
+I, [2019-12-30T16:16:47.262797 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502]   Rendering inline template within layouts/application
+I, [2019-12-30T16:16:47.263328 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502]   Rendered inline template within layouts/application (Duration: 0.4ms | Allocations: 68)
+I, [2019-12-30T16:16:47.265093 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502]   Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 287)
+I, [2019-12-30T16:16:47.266326 #9734]  INFO -- : [8fd4004a-b71d-4296-951c-60e2db090502] Completed 200 OK in 16ms (Views: 3.9ms | ActiveRecord: 3.2ms | Allocations: 2947)
+I, [2019-12-30T16:16:47.634117 #9734]  INFO -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb] Started GET "/assets/Alata-Regular" for 37.47.68.182 at 2019-12-30 16:16:47 +0000
+I, [2019-12-30T16:16:47.635305 #9734]  INFO -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb] Processing by Comfy::Cms::ContentController#show as */*
+I, [2019-12-30T16:16:47.635425 #9734]  INFO -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   Parameters: {"cms_path"=>"assets/Alata-Regular"}
+D, [2019-12-30T16:16:47.637871 #9734] DEBUG -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+D, [2019-12-30T16:16:47.639081 #9734] DEBUG -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   [1m[36mComfy::Cms::Site Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2019-12-30T16:16:47.640980 #9734] DEBUG -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   [1m[36mComfy::Cms::Page Load (0.4ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/assets/Alata-Regular"], ["LIMIT", 1]]
+D, [2019-12-30T16:16:47.642544 #9734] DEBUG -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   [1m[36mComfy::Cms::Page Load (0.3ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/404"], ["LIMIT", 1]]
+I, [2019-12-30T16:16:47.643266 #9734]  INFO -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb] Completed 404 Not Found in 8ms (ActiveRecord: 1.7ms | Allocations: 1608)
+F, [2019-12-30T16:16:47.643984 #9734] FATAL -- : [9ae87dc8-01f6-43be-b7f3-f98fab62accb]   
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] ActionController::RoutingError (Page Not Found at: "assets/Alata-Regular"):
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb]   
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] comfortable_mexican_sofa (2.0.18) app/controllers/comfy/cms/content_controller.rb:68:in `load_cms_page'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:183:in `block in halting_and_conditional'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `each'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `invoke_before'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/notifications.rb:180:in `block in instrument'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/notifications.rb:180:in `instrument'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activerecord (6.0.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/abstract_controller/base.rb:136:in `process'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionview (6.0.2) lib/action_view/rendering.rb:39:in `process'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal.rb:191:in `dispatch'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:32:in `each'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/etag.rb:25:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/head.rb:12:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] railties (6.0.2) lib/rails/engine.rb:526:in `call'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:149:in `accept_and_process_next_request'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+[9ae87dc8-01f6-43be-b7f3-f98fab62accb] /usr/lib/ruby/vendor_ruby/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-12-30T16:16:48.899021 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3] Started GET "/" for 37.47.68.182 at 2019-12-30 16:16:48 +0000
+I, [2019-12-30T16:16:48.900014 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3] Processing by Comfy::Cms::ContentController#show as HTML
+D, [2019-12-30T16:16:48.902574 #9734] DEBUG -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+D, [2019-12-30T16:16:48.903844 #9734] DEBUG -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   [1m[36mComfy::Cms::Site Load (0.4ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2019-12-30T16:16:48.905891 #9734] DEBUG -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   [1m[36mComfy::Cms::Page Load (0.4ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/"], ["LIMIT", 1]]
+D, [2019-12-30T16:16:48.907653 #9734] DEBUG -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   [1m[36mComfy::Cms::Layout Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-12-30T16:16:48.909616 #9734] DEBUG -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   [1m[36mComfy::Cms::Fragment Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = $1 AND "comfy_cms_fragments"."record_type" = $2[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Page"]]
+I, [2019-12-30T16:16:48.910591 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   Rendering inline template within layouts/application
+I, [2019-12-30T16:16:48.911118 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   Rendered inline template within layouts/application (Duration: 0.4ms | Allocations: 68)
+I, [2019-12-30T16:16:48.912855 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3]   Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 287)
+I, [2019-12-30T16:16:48.913955 #9734]  INFO -- : [2fe3d13a-6598-478d-9b64-8f5e0fee31f3] Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 2.4ms | Allocations: 2951)
+I, [2019-12-30T16:16:49.339724 #9734]  INFO -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] Started GET "/assets/Alata-Regular" for 37.47.68.182 at 2019-12-30 16:16:49 +0000
+I, [2019-12-30T16:16:49.340740 #9734]  INFO -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] Processing by Comfy::Cms::ContentController#show as */*
+I, [2019-12-30T16:16:49.340837 #9734]  INFO -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   Parameters: {"cms_path"=>"assets/Alata-Regular"}
+D, [2019-12-30T16:16:49.343274 #9734] DEBUG -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+D, [2019-12-30T16:16:49.344475 #9734] DEBUG -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   [1m[36mComfy::Cms::Site Load (0.5ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2019-12-30T16:16:49.346525 #9734] DEBUG -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   [1m[36mComfy::Cms::Page Load (0.4ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/assets/Alata-Regular"], ["LIMIT", 1]]
+D, [2019-12-30T16:16:49.348272 #9734] DEBUG -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   [1m[36mComfy::Cms::Page Load (0.4ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = $1 AND "comfy_cms_pages"."is_published" = $2 AND "comfy_cms_pages"."full_path" = $3 LIMIT $4[0m  [["site_id", 1], ["is_published", true], ["full_path", "/404"], ["LIMIT", 1]]
+I, [2019-12-30T16:16:49.349045 #9734]  INFO -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] Completed 404 Not Found in 8ms (ActiveRecord: 1.8ms | Allocations: 1608)
+F, [2019-12-30T16:16:49.350096 #9734] FATAL -- : [7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] ActionController::RoutingError (Page Not Found at: "assets/Alata-Regular"):
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a]   
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] comfortable_mexican_sofa (2.0.18) app/controllers/comfy/cms/content_controller.rb:68:in `load_cms_page'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:183:in `block in halting_and_conditional'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `each'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:514:in `invoke_before'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/notifications.rb:180:in `block in instrument'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/notifications.rb:180:in `instrument'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activerecord (6.0.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/abstract_controller/base.rb:136:in `process'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionview (6.0.2) lib/action_view/rendering.rb:39:in `process'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal.rb:191:in `dispatch'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:32:in `each'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/etag.rb:25:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/head.rb:12:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] railties (6.0.2) lib/rails/engine.rb:526:in `call'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:149:in `accept_and_process_next_request'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+[7582dee9-0e84-4e4d-b9a4-9c98eda7ed3a] /usr/lib/ruby/vendor_ruby/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
