@@ -1,10 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-<<<<<<< HEAD
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
-=======
 set :application, "kala"
 set :repo_url, "https://github.com/bartekv2/kala.git"
 
@@ -19,7 +15,6 @@ set :keep_releases, 5
 # Optionally, you can symlink your database.yml and/or secrets.yml file from the shared directory during deploy
 # This is useful if you don't want to use ENV variables
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
->>>>>>> 28fdcbf8860d0ee6ef6b43355a60cc66261a5757
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

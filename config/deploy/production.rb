@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 server '167.172.219.110', user: 'deploy', roles: %w{app db web}
 
->>>>>>> 28fdcbf8860d0ee6ef6b43355a60cc66261a5757
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
