@@ -6,7 +6,7 @@ module.exports = {
     }
     extend: {
       colors: {
-        'jozef': '#243c5a',
+        'jan': '#243c5a',
         'tadeusz': '#cccccc',
       }
     }
