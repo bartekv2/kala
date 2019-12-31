@@ -11,16 +11,41 @@
   </head>
 
   <body>
+    <header class="container mx-auto pt-6 md:pt-4">
+            <div class="relative">
+              <h1 class="text-center text-5xl"><%= link_to "KALA", "/" %></h1>
+              <div class="absolute right-0 top-0 flex mt-1 mr-4">
+                <div class="mt-1 mr-2">
+                <%= show_language_to_select %>
+                </div>
+                <div>
 
-    <header class="bg-green-400 container mx-auto pt-6 md:pt-4 text-teal-600">
-        <div class="relative">
-          <h1 class="text-center text-5xl">KALA</h1>
-          <div class="bg-red-500 absolute right-0 top-0">
-            <%= show_language_to_select %>
-          </div>
-        </div>
-        <%= render partial: "layouts/navbar" %>
-    </header>
+                <i class="block p-2 rounded-full" style="background: #159793">
+                <svg class="flex mx-auto" fill="#FDEEF6" id="facebook_icon" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 510 510" style="" xml:space="preserve">
+                	<g id="post-facebook">
+                		<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
+                			 M433.5,51v76.5h-51c-15.3,0-25.5,10.2-25.5,25.5v51h76.5v76.5H357V459h-76.5V280.5h-51V204h51v-63.75
+                			C280.5,91.8,321.3,51,369.75,51H433.5z"/>
+                	</g>
+                </svg>
+                </i>
+
+                <i class="block mt-2 p-2 rounded-full" style="background: #159793">
+                <svg class="flex mx-auto" fill="#FDEEF6" id="instagram_icon" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 510 510" style="" xml:space="preserve">
+                <g id="post-instagram">
+                		<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
+                			 M255,153c56.1,0,102,45.9,102,102c0,56.1-45.9,102-102,102c-56.1,0-102-45.9-102-102C153,198.9,198.9,153,255,153z M63.75,459
+                			C56.1,459,51,453.9,51,446.25V229.5h53.55C102,237.15,102,247.35,102,255c0,84.15,68.85,153,153,153c84.15,0,153-68.85,153-153
+                			c0-7.65,0-17.85-2.55-25.5H459v216.75c0,7.65-5.1,12.75-12.75,12.75H63.75z M459,114.75c0,7.65-5.1,12.75-12.75,12.75h-51
+                			c-7.65,0-12.75-5.1-12.75-12.75v-51c0-7.65,5.1-12.75,12.75-12.75h51C453.9,51,459,56.1,459,63.75V114.75z"/>
+                	</g>
+                </svg>
+                </i>
+                </div>
+              </div>
+            </div>
+            <%= render partial: "layouts/navbar" %>
+        </header>
 
     <main class="bg-teal-600 bg-scroll bg-cover" style="background-image: url(/images/saturn.jpg)">
         <%= yield %>

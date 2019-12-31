@@ -5,8 +5,12 @@
   font-family: "Alata";
   src: url('/assets/Alata-Regular');
 }
+html {
+  background-color: #FDEEF6;
+}
 body {
   font-family: "Alata", sans-serif;
+  color: #159793;
 }
 h2 {
   @apply text-2xl py-2;
@@ -14,6 +18,9 @@ h2 {
 #menu-toggle:checked + #menu {
   display: block;
 }
+a:hover {
+  @apply text-teal-400;
+}
 #menu li.active a {
-  @apply text-teal-900;
+  @apply text-teal-700;
 }
