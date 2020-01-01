@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Kala - <%= @cms_page.label %></title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,9 +14,9 @@
   <body>
     <header class="container mx-auto pt-6 md:pt-4">
             <div class="relative">
-              <h1 class="text-center text-5xl"><%= link_to "KALA", "/" %></h1>
+              <h1 class="text-center text-3xl tracking-widest"><%= link_to "KALA", "/" %></h1>
               <div class="absolute right-0 top-0 flex mt-1 mr-4">
-                <div class="mt-1 mr-2">
+                <div class="mt-1 mr-4 text-xs">
                 <%= show_language_to_select %>
                 </div>
                 <div>
@@ -30,7 +31,7 @@
                 </svg>
                 </i>
 
-                <i class="block mt-2 p-2 rounded-full" style="background: #159793">
+                <i class="block mt-3 p-2 rounded-full" style="background: #159793">
                 <svg class="flex mx-auto" fill="#FDEEF6" id="instagram_icon" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 510 510" style="" xml:space="preserve">
                 <g id="post-instagram">
                 		<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
@@ -47,10 +48,10 @@
             <%= render partial: "layouts/navbar" %>
         </header>
 
-    <main class="bg-teal-600 bg-scroll bg-cover" style="background-image: url(/images/saturn.jpg)">
+    <main class="bg-teal-600 bg-cover bg-no-repeat w-full" style="background-image: url(/images/green_girl.png)">
+      <div class="w-1/2 mx-auto pt-16 text-2xl text-gray-700 text-center h-screen">
         <%= yield %>
-                    <p class="text-jan">Józef i Kózef i Karuzef razem</p>
-                    <p class="text-tadeusz">Razem gazem VUVU</p>
+      </div>
     </main>
 
     <footer class="text-center text-teal-600 my-6">
