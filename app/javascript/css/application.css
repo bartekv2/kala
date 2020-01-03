@@ -12,6 +12,9 @@ body {
   font-family: "Alata", sans-serif;
   color: #159793;
 }
+main {
+  background-color: #159793;
+}
 h2 {
   @apply text-2xl py-2;
 }
@@ -23,4 +26,24 @@ a:hover {
 }
 #menu li.active a {
   @apply text-teal-700;
+}
+
+#o_mnie, #poradnictwo {
+  color:#fdeef6;
+}
+
+#o_mnie p, #poradnictwo p {
+  margin-bottom:10px;
+}
+
+#poradnictwo ol {
+  @apply list-decimal mb-2 ml-4;
+}
+
+#poradnictwo ul {
+  @apply list-disc mb-2 ml-4;
+}
+
+#poradnictwo h4 {
+ @apply text-base;
 }
