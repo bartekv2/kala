@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   #root 'home#index'
   get 'locale', to: 'locales#save_locale', as: :set_locale
-  comfy_route :cms_admin, path: "/admin"
+  comfy_route :cms_admin, path: "/kala/admin"
   # Ensure that this route is defined last
-  comfy_route :cms, path: "/"
+  comfy_route :cms, path: "/kala"
 
 
   # mount Spina::Engine => '/'

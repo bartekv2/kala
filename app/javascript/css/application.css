@@ -15,9 +15,7 @@ body {
 main {
   background-color: #159793;
 }
-h2 {
-  @apply text-2xl py-2;
-}
+
 #menu-toggle:checked + #menu {
   display: block;
 }
@@ -46,4 +44,8 @@ a:hover {
 
 #poradnictwo h4 {
  @apply text-base;
+}
+
+#praca-z-cialem .left-column {
+  background-color: #FDEEF6;
 }
