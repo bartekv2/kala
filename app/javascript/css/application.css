@@ -12,40 +12,75 @@ body {
   font-family: "Alata", sans-serif;
   color: #159793;
 }
-main {
-  background-color: #159793;
-}
 
 #menu-toggle:checked + #menu {
   display: block;
 }
-a:hover {
-  @apply text-teal-400;
-}
+
 #menu li.active a {
   @apply text-teal-700;
+}
+
+#menu a:hover, .language-selector a:hover {
+  @apply text-teal-400;
+}
+
+main {
+  background-color: #159793;
+}
+
+main p {
+  margin-bottom:10px;
+}
+
+main#kontakt p {
+  margin-bottom: 4px;
+}
+
+main ol {
+  @apply list-decimal mb-2 ml-4;
+}
+
+main ul {
+  @apply list-disc mb-2 ml-4;
+}
+
+main#praca-z-cialem nav ul {
+  @apply m-0 list-none;
 }
 
 #o_mnie, #poradnictwo {
   color:#fdeef6;
 }
 
-#o_mnie p, #poradnictwo p {
-  margin-bottom:10px;
-}
-
-#poradnictwo ol {
-  @apply list-decimal mb-2 ml-4;
-}
-
-#poradnictwo ul {
-  @apply list-disc mb-2 ml-4;
-}
-
 #poradnictwo h4 {
  @apply text-base;
 }
 
-#praca-z-cialem .left-column {
+#praca-z-cialem .left-column, #warsztaty article {
   background-color: #FDEEF6;
+}
+
+main a:hover, #praca-z-cialem nav a:hover, #praca-z-cialem nav .active {
+  text-decoration: underline;
+}
+
+#kontakt {
+  color: #FDEEF6;
+}
+
+#kontakt svg {
+  display: inline;
+}
+
+#social_media_icons a:hover {
+  text-decoration: none;
+}
+
+header #instagram {
+  @apply mt-3;
+}
+
+#kontakt #instagram {
+  @apply ml-1;
 }
