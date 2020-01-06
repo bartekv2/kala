@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'lightbox-plus-jquery', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('favicon-32.ico') %>
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   </head>
@@ -26,9 +27,7 @@
       </div>
       <%= render partial: "layouts/navbar" %>
     </header>
-
-    <%= yield %>
-
+        <%= yield %>
     <footer class="text-center text-sm mt-10 mb-16 tracking-widest">
       <%= simple_format show_footer.upcase %>
     </footer>
