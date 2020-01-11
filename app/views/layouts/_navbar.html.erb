@@ -1,26 +1,26 @@
-<label for="menu-toggle" class="flex justify-center mt-2 cursor-pointer md:hidden pb-2">
+<label for="menu-toggle" class="flex justify-center mt-4 cursor-pointer md:hidden pb-2">
   <svg class="fill-current hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
 </label>
 <input class="hidden" type="checkbox" id="menu-toggle" />
-<nav class="hidden md:flex text-xs justify-center md:w-auto w-full mt-10 mb-10" id="menu" role="navigation">
-  <ul class="md:flex uppercase tracking-widest md:tracking-wider">
+<nav class="hidden md:flex text-xs justify-center md:w-auto w-full md:my-4 lg:my-6 xl:my-10" id="menu" role="navigation">
+  <ul class="md:flex uppercase tracking-widest text-center md:tracking-wider">
     <li class="<%= active_class("/kala/o-mnie") %> border-t md:border-0 md:mr-4 lg:mr-12 xl:mr-24">
-      <%= link_to t("about"), "/kala/o-mnie", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("about"), "/kala/o-mnie", class: "block md:inline py-3 md:py-0" %>
     </li>
     <li class="<%= active_class("/kala/poradnictwo-psychologiczne") %> border-t md:border-0 md:mr-4 lg:mr-12 xl:mr-24">
-      <%= link_to t("coaching"), "/kala/poradnictwo-psychologiczne", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("coaching"), "/kala/poradnictwo-psychologiczne", class: "block md:inline py-3 md:py-0" %>
     </li>
     <li class="<%= active_class("/kala/lomi-lomi-nui") %> border-t md:border-0 md:mr-4 lg:mr-12 xl:mr-24">
-      <%= link_to t("body"), "/kala/lomi-lomi-nui", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("body"), "/kala/lomi-lomi-nui", class: "block md:inline py-3 md:py-0" %>
     </li>
     <li class="<%= active_class("/kala/warsztaty") %> border-t md:border-0 md:mr-4 lg:mr-12 xl:mr-24">
-      <%= link_to t("workshops"), "/kala/warsztaty", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("workshops"), "/kala/warsztaty", class: "block md:inline py-3 md:py-0" %>
     </li>
     <li class="<%= active_class("/kala/galeria") %> border-t md:border-0 md:mr-4 lg:mr-12 xl:mr-24" data-turbolinks="false">
-      <%= link_to t("gallery"), "/kala/galeria", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("gallery"), "/kala/galeria", class: "block md:inline py-3 md:py-0" %>
     </li>
     <li class="<%= active_class("/kala/kontakt") %> border-t md:border-0">
-      <%= link_to t("contact"), "/kala/kontakt", class: "block md:inline py-4 md:py-0" %>
+      <%= link_to t("contact"), "/kala/kontakt", class: "block md:inline py-3 md:py-0" %>
     </li>
   </ul>
 </nav>

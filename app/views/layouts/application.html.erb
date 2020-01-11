@@ -9,14 +9,45 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'lightbox-plus-jquery', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('favicon-32.ico') %>
+    <style>
+      #homepage { background-image: url(/images/bg_boat_sm.jpg) }
+      #logo {width: 100px; height: 70px;}
+      #facebook, #instagram {width: 26px; height: 26px;}
+      #o_mnie article img {width: 180px; height: 180px; margin:0 auto;}
+      #o_mnie_bg {background-image: url(/images/o_mnie_sm.jpg)}
+      #poradnictwo_bg {background-image: url(/images/poradnictwo_sm.jpg)}
+      #kontakt_bg {background-image: url(/images/kontakt_sm.jpg)}
+      @media (min-width:768px) {
+        #o_mnie_bg {background-image: url(/images/o_mnie_lg.jpg)}
+        #poradnictwo_bg {background-image: url(/images/poradnictwo_lg.jpg)}
+        #kontakt_bg {background-image: url(/images/kontakt_lg.jpg)}
+      }
+      @media (min-width:1024px) {
+        #logo {width: 120px; height: 84px;}
+        #homepage { background-image: url(/images/bg_boat_lg.jpg)}
+        #facebook, #instagram {width: 28px; height: 28px;}
+        #warsztaty_bg_left {background-image: url(/images/warsztaty_left.jpg)}}
+      @media (min-width:1280px) {
+        #logo {width: 151px; height: 106px;}
+        #homepage { background-image: url(/images/bg_boat_xl2.jpg) }
+        #facebook, #instagram {width: 30px; height: 30px;}
+        #ola_img {width: 225px; height: 227px;}
+        #o_mnie_bg {background-image: url(/images/o_mnie_xl.jpg)}
+        #poradnictwo_bg {background-image: url(/images/poradnictwo_xl.jpg)}
+        #kontakt_bg {background-image: url(/images/kontakt_xl.jpg)}
+        #o_mnie article img {margin: 0;}
+
+      #homepage p {margin: 0; color: #FDEEF6;}
+
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <header class="container mx-auto pt-6 md:pt-8">
+    <header class="container mx-auto pt-4 xl:pt-8">
       <div class="flex relative justify-center">
         <h1>
-          <a href="/kala" title="Kala - wparcie holistyczne"><img src="../images/kala_logo.svg" alt="Kala - wsparcie holistyczne" width="151" height="106" /></a>
+          <a href="/kala" title="Kala - <%= t("holistic-support") %>"><img src="../images/kala_logo.svg" alt="Kala - wsparcie holistyczne" id="logo" width="151" height="106" /></a>
         </h1>
         <div class="absolute right-0 top-0 flex mt-1 mr-4">
           <div class="mt-1 mr-4 text-xs language-selector">
@@ -27,8 +58,10 @@
       </div>
       <%= render partial: "layouts/navbar" %>
     </header>
-        <%= yield %>
-    <footer class="text-center text-sm mt-10 mb-16 tracking-widest">
+
+      <%= yield %>
+
+    <footer class="text-center text-xs lg:text-sm mt-6 mb-8 lg:mt-8 mb-12 xl:mt-10 xl:mb-16 tracking-widest">
       <%= simple_format show_footer.upcase %>
     </footer>
   </body>

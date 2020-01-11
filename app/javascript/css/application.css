@@ -57,8 +57,17 @@ main#praca-z-cialem nav ul {
  @apply text-base;
 }
 
-#praca-z-cialem .left-column, #warsztaty article, #galeria {
+#praca-z-cialem .left-column, #warsztaty article {
   background-color: #FDEEF6;
+}
+
+#warsztaty td {
+  @apply pb-4 pr-8 tracking-widest;
+}
+
+#warsztaty_lista {
+  background-color: #159793;
+  color: #FDEEF6;
 }
 
 main a:hover, #praca-z-cialem nav a:hover, #praca-z-cialem nav .active {
@@ -77,12 +86,9 @@ main a:hover, #praca-z-cialem nav a:hover, #praca-z-cialem nav .active {
   text-decoration: none;
 }
 
-header #instagram {
-  @apply mt-3;
-}
-
 #kontakt #instagram {
   @apply ml-1;
+  @apply mt-0;
 }
 
 /* Lightbox */
@@ -319,9 +325,14 @@ body.lb-disable-scrolling {
   opacity: 0;
 }
 
+#galeria .wrapper {
+  background-color: #128283;
+}
+
 #galeria .wrapper:hover img {
-  opacity: .5;
+  opacity: 0;
 }
 #galeria .wrapper:hover .overlay {
   opacity: 1;
 }
+#galeria h2, #galeria a {color: #FDEEF6}
