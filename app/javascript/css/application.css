@@ -13,6 +13,37 @@ body {
   color: #159793;
 }
 
+#homepage {color: #FDEEF6; background-image: url(/images/bg_boat_sm.jpg) }
+#homepage p {margin: 0; color: #FDEEF6;}
+#logo {width: 100px; height: 70px;}
+#facebook, #instagram {width: 26px; height: 26px;}
+#o_mnie article img {width: 180px; height: 180px; margin:0 auto;}
+#o_mnie_bg {background-image: url(/images/o_mnie_sm.jpg)}
+#poradnictwo_bg {background-image: url(/images/poradnictwo_sm.jpg)}
+#kontakt_bg {background-image: url(/images/kontakt_sm.jpg)}
+
+@media (min-width:768px) {
+  #o_mnie_bg {background-image: url(/images/o_mnie_lg.jpg)}
+  #poradnictwo_bg {background-image: url(/images/poradnictwo_lg.jpg)}
+  #kontakt_bg {background-image: url(/images/kontakt_lg.jpg)}
+}
+
+@media (min-width:1024px) {
+  #logo {width: 120px; height: 84px;}
+  #homepage { background-image: url(/images/bg_boat_lg.jpg)}
+  #facebook, #instagram {width: 28px; height: 28px;}
+  #warsztaty_bg_left {background-image: url(/images/warsztaty_left.jpg)}}
+
+  @media (min-width:1280px) {
+    #logo {width: 151px; height: 106px;}
+    #homepage { background-image: url(/images/bg_boat_xl.jpg) }
+    #facebook, #instagram {width: 30px; height: 30px;}
+    #ola_img {width: 225px; height: 227px;}
+    #o_mnie_bg {background-image: url(/images/o_mnie_xl.jpg)}
+    #poradnictwo_bg {background-image: url(/images/poradnictwo_xl.jpg)}
+    #kontakt_bg {background-image: url(/images/kontakt_xl.jpg)}
+    #o_mnie article img {margin: 0;}}
+
 #menu-toggle:checked + #menu {
   display: block;
 }
