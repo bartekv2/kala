@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # Ensure that this route is defined last
   comfy_route :cms, path: "/"
 
-
   # mount Spina::Engine => '/'
   #get 'o-mnie' => 'home#about', as: :about
   #get 'praca-z-cialem' => 'home#body', as: :body

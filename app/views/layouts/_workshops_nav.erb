@@ -1,0 +1,20 @@
+<table>
+  <tbody>
+    <% @cms_page.children.published.each do |p| %>
+    <tr>
+      <td><%= cms_fragment_render(:data_warsztatu, p) %></td>
+      <td><a href="javascript:show('<%= p.label.parameterize %>')"><%= p.label %></a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+    function close(id){
+    document.getElementById('workshop_info').innerHTML = ""
+}
+
+function show(id) {
+    document.getElementById('workshop_info').innerHTML = document.getElementById(id).innerHTML;
+  }
+</script>
