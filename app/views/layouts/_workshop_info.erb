@@ -1,5 +1,5 @@
 <div id="workshop_info">
-  <article class="text-xs px-8 xl:pl-32 py-12">
+  <article class="text-xs px-8 xl:pl-32 py-6 xl:py-12">
     <div class="xl:w-1/2 text-justify">
       <%= cms_fragment_render(:tekst_glowny, @cms_page) %>
     </div>
@@ -7,9 +7,9 @@
 </div>
 <% @cms_page.children.published.each do |p| %>
 <div id="<%= translated_page(p).label.parameterize %>" style="display:none">
-  <article class="text-xs px-8 xl:pl-32 py-12">
+  <article class="text-xs px-8 xl:pl-32 py-6 xl:py-12">
     <div class="xl:w-1/2 text-justify">
-      <h3 class="text-3xl tracking-widest my-6 xl:mb-12"><%= translated_page(p).label %></h3>
+      <h3 class="text-3xl tracking-widest mb-6 xl:mb-12"><%= translated_page(p).label %></h3>
       <%= cms_fragment_render(:opis_warsztatu, translated_page(p)) %>
     </div>
     <p class="pt-6"><a href="javascript:close('<%= translated_page(p).label.parameterize %>')"><%= t 'close' %></a></p>
