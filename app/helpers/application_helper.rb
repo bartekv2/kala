@@ -10,9 +10,9 @@ module ApplicationHelper
 
   def translated_page(p)
     if session[:locale] == "pl" || session[:locale].nil? || session[:locale].empty?
-      translated_page = p
+      p
     else
-      translated_page = p.translate!
+      p.translate!.nil? ? p : p.translate!
     end
   end
 

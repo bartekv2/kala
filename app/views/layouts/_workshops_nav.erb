@@ -3,7 +3,7 @@
   <tbody>
       <% @cms_page.children.published.each do |p| %>
       <tr>
-        <td><%= cms_fragment_render(:data_warsztatu, p) %></td>
+        <td><%= cms_fragment_render(:data_warsztatu, translated_page(p)) %></td>
         <td><a href="javascript:show('<%= translated_page(p).label.parameterize %>')"><%= translated_page(p).label %></a></td>
       </tr>
       <% end %>
