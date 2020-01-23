@@ -8,6 +8,14 @@ module ApplicationHelper
     end
   end
 
+  def translated_page(p)
+    if session[:locale] == "pl" || session[:locale].nil? || session[:locale].empty?
+      translated_page = p
+    else
+      translated_page = p.translate!
+    end
+  end
+
   def show_footer
     "<p>Kala</p><p>© #{DateTime.now.year} #{t "copyrights"}</p>"
   end
