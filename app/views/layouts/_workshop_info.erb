@@ -1,9 +1,4 @@
 <div id="workshop_info">
-  <article class="text-xs px-8 xl:pl-32 py-6 xl:py-12">
-    <div class="xl:w-1/2 text-justify">
-      <%= cms_fragment_render(:tekst_glowny, @cms_page) %>
-    </div>
-  </article>
 </div>
 <% @cms_page.children.published.each do |p| %>
 <div id="<%= translated_page(p).label.parameterize %>" style="display:none">
