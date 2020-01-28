@@ -2,9 +2,9 @@ module ApplicationHelper
 
   def show_language_to_select
     if session[:locale] == "pl" || session[:locale].nil? || session[:locale].empty?
-      link_to "ENG", set_locale_path(locale: "en")
+      link_to "ENG", set_locale_path(locale: "en"), :"data-turbolinks" => false
     else
-      link_to "POL", set_locale_path(locale: "pl")
+      link_to "POL", set_locale_path(locale: "pl"), :"data-turbolinks" => false
     end
   end
 
