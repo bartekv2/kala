@@ -1,22 +1,19 @@
-
 <table>
   <tbody>
-      <% @cms_page.children.published.each do |p| %>
-      <tr>
-        <td><%= cms_fragment_render(:data_warsztatu, translated_page(p)) %></td>
-        <td><a href="javascript:show('<%= translated_page(p).label.parameterize %>')"><%= translated_page(p).label %></a></td>
-      </tr>
-      <% end %>
+    <% @cms_page.children.published.each do |p| %>
+    <tr>
+      <td><%= cms_fragment_render(:data_warsztatu, translated_page(p)) %></td>
+      <td><a href="javascript:show('<%= translated_page(p).label.parameterize %>')"><%= translated_page(p).label %></a></td>
+    </tr>
+    <% end %>
   </tbody>
 </table>
 
-
 <script>
-    function close(id){
+  function close(id){
     document.getElementById('workshop_info').innerHTML = ""
-}
-
-function show(id) {
+  }
+  function show(id) {
     document.getElementById('workshop_info').innerHTML = document.getElementById(id).innerHTML;
   }
 </script>
