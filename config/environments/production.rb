@@ -118,8 +118,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'gmail.com',
-  user_name:            ENV["GMAIL_EMAIL"],
-  password:             ENV["GMAIL_PASSWORD"],
+  user_name:            'b.dymet@gmail.com',
+  password:             'l0k0m0tywa',
   authentication:       'plain',
   enable_starttls_auto: true }
   config.action_mailer.default_url_options = { :host => "kala.org.pl" }
