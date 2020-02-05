@@ -122,5 +122,5 @@ Rails.application.configure do
   password:             'l0k0m0tywa',
   authentication:       'plain',
   enable_starttls_auto: true }
-  config.action_mailer.default_url_options = { :host => "hhtp://kala.org.pl" }
+  config.action_mailer.default_url_options = { :host => "http://kala.org.pl" }
 end
