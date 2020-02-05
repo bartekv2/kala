@@ -117,10 +117,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
-  domain:               'http://kala.org.pl',
+  domain:               'kala.org.pl',
   user_name:            'b.dymet@gmail.com',
   password:             'l0k0m0tywa',
   authentication:       'plain',
   enable_starttls_auto: true }
-  config.action_mailer.default_url_options = { :host => "http://kala.org.pl" }
+  config.action_mailer.default_url_options = { :host => "kala.org.pl" }
 end
