@@ -117,7 +117,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
-  domain:               'kala.org.pl',
+  domain:               'gmail.com',
   user_name:            'b.dymet@gmail.com',
   password:             'l0k0m0tywa',
   authentication:       'plain',
