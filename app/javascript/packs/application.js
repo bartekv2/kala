@@ -17,4 +17,5 @@ require("channels")
 import "../css/application.css"
 
 //= require jquery
+//= require jquery_ujs
 //= require lightbox2

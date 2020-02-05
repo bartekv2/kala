@@ -19,13 +19,13 @@ body {
 #facebook, #instagram {width: 26px; height: 26px;}
 #o_mnie article img {width: 180px; height: 180px; margin:0 auto;}
 #o_mnie_bg {background-image: url(/images/o_mnie_sm.jpg)}
-#poradnictwo_bg {background-image: url(/images/poradnictwo_sm.jpg)}
+#poradnictwo_bg {background-image: url(/images/poradnictwo_lg.jpg)}
 #kontakt_bg {background-image: url(/images/kontakt_sm.jpg)}
 #lomi-img {width: 100%; height: 100%; background-image: url(/images/lomi.jpg)}
 
 @media (min-width:768px) {
   #o_mnie_bg {background-image: url(/images/o_mnie_lg.jpg)}
-  #poradnictwo_bg {background-image: url(/images/poradnictwo_sm.jpg)}
+  #poradnictwo_bg {background-image: url(/images/poradnictwo_lg.jpg)}
   #kontakt_bg {background-image: url(/images/kontakt_lg.jpg)}
 }
 
@@ -33,16 +33,21 @@ body {
   #logo {width: 120px; height: 84px;}
   #homepage { background-image: url(/images/bg_boat_lg.jpg)}
   #facebook, #instagram {width: 28px; height: 28px;}
-  #warsztaty_bg_left {background-image: url(/images/warsztaty_left.jpg)}}
+  #warsztaty_bg_left {background-image: url(/images/warsztaty_left.jpg)}
+}
 
 @media (min-width:1280px) {
   #logo {width: 151px; height: 106px;}
   #homepage { background-image: url(/images/bg_boat_xl.jpg) }
-  #facebook, #instagram {width: 30px; height: 30px;}i
-  #o_mnie_bg {background-image: url(/images/o_mnie_xl.jpg)}
-  #poradnictwo_bg {background-image: url(/images/poradnictwo_xl.jpg)}
+  #facebook, #instagram {width: 30px; height: 30px;}
+  #poradnictwo_bg {background-image: url(/images/poradnictwo_lg.jpg)}
   #kontakt_bg {background-image: url(/images/kontakt_xl.jpg)}
-  #o_mnie article img {margin: 0; width: 225px; height: 227px;}}
+  #o_mnie article img {margin: 0; width: 225px; height: 227px;}
+}
+
+@media (min-width:1920px) {
+  #o_mnie_bg {background-image: url(/images/o_mnie_xl.jpg)}
+}
 
 #menu-toggle:checked + #menu {
   display: block;
@@ -121,9 +126,12 @@ main a:hover, #praca-z-cialem nav a:hover, #praca-z-cialem nav .active {
   text-decoration: none;
 }
 
+#kontakt #social_media_icons {
+  @apply my-6;
+}
+
 #kontakt #instagram {
-  @apply ml-1;
-  @apply mt-0;
+  @apply ml-1 mt-0;
 }
 
 /* Lightbox */
@@ -335,11 +343,21 @@ body.lb-disable-scrolling {
 
 /* Overlay images */
 
+
+
 .wrapper {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
+
+@media (min-width:768px) {
+  .wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 #galeria img {
   opacity: 1;
   display: block;
@@ -371,3 +389,23 @@ body.lb-disable-scrolling {
   opacity: 1;
 }
 #galeria h2, #galeria a {color: #FDEEF6}
+
+.error {
+  @apply bg-red-100 border border-red-400 text-red-700 my-2 px-2 py-1 rounded shadow-md;
+}
+
+.notice {
+  @apply bg-teal-100 border border-teal-500 rounded text-teal-900 my-2 px-2 py-1 shadow-md;
+}
+
+.field_with_errors input {
+  @apply border-red-500;
+}
+
+.field_with_errors .error {
+  @apply bg-transparent border-transparent text-kalalight italic my-2 px-2 py-1 shadow-none;
+}
+
+#contact-form label {
+  @apply block mt-2 mb-1;
+}
