@@ -116,11 +116,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
+  address:              'smtp.sendgrid.net',
   port:                 587,
   domain:               'kala.org.pl',
-  user_name:            ENV['GMAIL_EMAIL'],
-  password:             ENV['GMAIL_PASSWORD'],
+  user_name:            'apikey',
+  password:             ENV['SENDGRID_API_KEY'],
   authentication:       'plain',
   enable_starttls_auto: true  }
 

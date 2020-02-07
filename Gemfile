@@ -32,7 +32,6 @@ gem 'mail_form', '~> 1.8'
 gem 'rails-i18n', '~> 6.0'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
-gem 'remotipart', '~> 1.4', '>= 1.4.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

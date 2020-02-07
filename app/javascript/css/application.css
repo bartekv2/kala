@@ -398,7 +398,7 @@ body.lb-disable-scrolling {
   @apply bg-teal-100 border border-teal-500 rounded text-teal-900 my-2 px-2 py-1 shadow-md;
 }
 
-.field_with_errors input {
+.field_with_errors input, .field_with_errors textarea {
   @apply border-red-500;
 }
 
