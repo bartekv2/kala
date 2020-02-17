@@ -11,7 +11,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'lightbox-plus-jquery', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('favicon-32.ico') %>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156037124-1"></script>
     <script>
@@ -21,16 +20,25 @@
 
       gtag('config', 'UA-156037124-1');
     </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+       fbq('init', '577928816137629');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1" src="https://www.facebook.com/tr?id=577928816137629&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-    <style>
-      .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
-      }
-      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0;
-      }
-    </style>
   </head>
   <body>
     <header class="container mx-auto pt-4 xl:pt-8 md:pb-0 relative">
@@ -53,30 +61,26 @@
     <footer class="text-center text-xs lg:text-sm mt-6 mb-8 lg:mt-8 mb-12 xl:mt-10 xl:mb-16 tracking-widest">
       <%= simple_format show_footer.upcase %>
     </footer>
-
-<script>
-  !function(e,t,r){"use strict";var n={};n.helpers={extendObj:function(){for(var e=1,t=arguments.length;e<t;e++)for(var r in arguments[e])arguments[e].hasOwnProperty(r)&&(arguments[e][r]&&arguments[e][r].constructor&&arguments[e][r].constructor===Object?(arguments[0][r]=arguments[0][r]||{},this.extendObj(arguments[0][r],arguments[e][r])):arguments[0][r]=arguments[e][r]);return arguments[0]}},n.countWords=function(e){return e.split(/\s+/).length},n.generateTrimmed=function(e,t){return e.split(/\s+/).slice(0,t).join(" ")+"..."},n.init=function(e){e=n.helpers.extendObj({},{target:"",numOfWords:50,toggle:!0,moreLink:"read more...",lessLink:"read less",linkClass:"rm-link",containerClass:!1},e);var r,i,s,o,a,l,c,d,u,h,m=t.querySelectorAll(e.target),g=m.length,f=[],L=[];for(o=0;o<g;o++)r=m[o].innerHTML,i=n.generateTrimmed(r,e.numOfWords),s=n.countWords(r),f.push(r),L.push(i),e.numOfWords<s-1&&(m[o].innerHTML=L[o],c=t.createElement("div"),e.containerClass&&(c.className=e.containerClass),c.innerHTML='<a id="rm-more_'+o+'" class="'+e.linkClass+'" style="cursor:pointer;" data-readmore="anchor">'+e.moreLink+"</a>",m[o].parentNode.insertBefore(c,m[o].nextSibling));for(a=0,l=(d=t.querySelectorAll('[data-readmore="anchor"]')).length;a<l;a++)d[a].onclick=function(){u=this.getAttribute("id"),h=u.split("_")[1],"true"!==this.getAttribute("data-clicked")?(m[h].innerHTML=f[h],!1!==e.toggle?(this.innerHTML=e.lessLink,this.setAttribute("data-clicked",!0)):this.innerHTML=""):(m[h].innerHTML=L[h],this.innerHTML=e.moreLink,this.setAttribute("data-clicked",!1))}},window.$readMoreJS=n}(0,this.document);
-</script>
-
-<script>
-  $readMoreJS.init({
-    target: '.readmore',
-    numOfWords: 80,
-    toggle: true,
-    moreLink: '<%= t("more") %>',
-    lessLink: '<%= t("less") %>',
-    containerClass: 'pt-8'
-  });
-</script>
-
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      isOpen: false
-    }
-  })
-</script>
-
+    <script>
+      !function(e,t,r){"use strict";var n={};n.helpers={extendObj:function(){for(var e=1,t=arguments.length;e<t;e++)for(var r in arguments[e])arguments[e].hasOwnProperty(r)&&(arguments[e][r]&&arguments[e][r].constructor&&arguments[e][r].constructor===Object?(arguments[0][r]=arguments[0][r]||{},this.extendObj(arguments[0][r],arguments[e][r])):arguments[0][r]=arguments[e][r]);return arguments[0]}},n.countWords=function(e){return e.split(/\s+/).length},n.generateTrimmed=function(e,t){return e.split(/\s+/).slice(0,t).join(" ")+"..."},n.init=function(e){e=n.helpers.extendObj({},{target:"",numOfWords:50,toggle:!0,moreLink:"read more...",lessLink:"read less",linkClass:"rm-link",containerClass:!1},e);var r,i,s,o,a,l,c,d,u,h,m=t.querySelectorAll(e.target),g=m.length,f=[],L=[];for(o=0;o<g;o++)r=m[o].innerHTML,i=n.generateTrimmed(r,e.numOfWords),s=n.countWords(r),f.push(r),L.push(i),e.numOfWords<s-1&&(m[o].innerHTML=L[o],c=t.createElement("div"),e.containerClass&&(c.className=e.containerClass),c.innerHTML='<a id="rm-more_'+o+'" class="'+e.linkClass+'" style="cursor:pointer;" data-readmore="anchor">'+e.moreLink+"</a>",m[o].parentNode.insertBefore(c,m[o].nextSibling));for(a=0,l=(d=t.querySelectorAll('[data-readmore="anchor"]')).length;a<l;a++)d[a].onclick=function(){u=this.getAttribute("id"),h=u.split("_")[1],"true"!==this.getAttribute("data-clicked")?(m[h].innerHTML=f[h],!1!==e.toggle?(this.innerHTML=e.lessLink,this.setAttribute("data-clicked",!0)):this.innerHTML=""):(m[h].innerHTML=L[h],this.innerHTML=e.moreLink,this.setAttribute("data-clicked",!1))}},window.$readMoreJS=n}(0,this.document);
+    </script>
+    <script>
+      $readMoreJS.init({
+        target: '.readmore',
+        numOfWords: 80,
+        toggle: true,
+        moreLink: '<%= t("more") %>',
+        lessLink: '<%= t("less") %>',
+        containerClass: 'pt-8'
+      });
+    </script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          isOpen: false
+        }
+      })
+    </script>
   </body>
 </html>
