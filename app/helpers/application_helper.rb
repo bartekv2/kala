@@ -16,8 +16,8 @@ module ApplicationHelper
     end
   end
 
-  def show_footer
-    "<p>Kala</p><p>© #{DateTime.now.year} #{t "copyrights"}</p>"
+  def get_footer
+    simple_format "Kala<br />© #{DateTime.now.year} #{t "copyrights"}".upcase
   end
 
   def active_class(link_path)

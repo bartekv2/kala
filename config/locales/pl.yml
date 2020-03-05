@@ -30,6 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pl:
+  errors:
+    messages:
+      blank: "pole nie może być puste"
+      invalid: "adres e-mail jest niepoprawny"
   hello: "Cześć świecie"
   about: "O mnie"
   body: "Praca z ciałem / Masaże holistyczne"
@@ -39,7 +43,7 @@ pl:
   contact: "Kontakt"
   copyrights: "Wszelkie prawa zastrzeżone"
   lomi-lomi-nui: "Lomi Lomi Nui"
-  pinda-sveda: "Pina Sveda"
+  pinda-sveda: "Pinda Sveda"
   abhyanga: "Abhyanga"
   butterfly-touch: "Dotyk Motyla"
   therapeutic-dance: "Taniec Terapeutyczny"
